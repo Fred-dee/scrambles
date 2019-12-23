@@ -1,0 +1,15 @@
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            "com.google.guava:guava:$libVersion.guava",
+            "javax.ws.rs:javax.ws.rs-api:$libVersion.javaxWsApi",
+            "javax.validation:validation-api:$libVersion.validationApi",
+            "junit:junit:$libVersion.junit"
+    )
+    testCompile(
+            "junit:junit:$libVersion.junit"
+    )
+}

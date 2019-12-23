@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+apply from: './lib-version.gradle'
+
+subprojects {
+    apply plugin: 'java'
+    group = 'fred.dilapisho'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    test {
+        systemProperty 'cucumber.options', '--plugin junit:target/surefire-reports/cucumber-junit.xml'
+        include '**/*Test.class'
+    }
+}

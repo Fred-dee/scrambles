@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'scrambles'
+
+include ':app'
+
+project(':app').projectDir = new File('./modules/app')

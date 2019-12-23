@@ -1,0 +1,11 @@
+ext.libVersion = [
+        apacheText: '1.8',
+        guava: '27.1-jre',
+        jackson: '2.9.8',
+        java: '1.8',
+        javaxWsApi: '2.0',
+        jerseyCommon: '2.28',
+        junit: '4.12',
+        validationApi: '2.0.1.Final',
+        wsRsApi: '2.1.1',
+]
