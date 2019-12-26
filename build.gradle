@@ -10,8 +10,8 @@ apply from: './lib-version.gradle'
 subprojects {
     apply plugin: 'java'
     group = 'fred.dilapisho'
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 1.11
+    targetCompatibility = 1.11
 
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
