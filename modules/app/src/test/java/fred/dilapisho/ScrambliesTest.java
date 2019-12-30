@@ -12,7 +12,6 @@ public class ScrambliesTest {
 
 	@Test
 	public void test() {
-		System.out.println("Fixed Tests scramble");
 		testing(Scramblies.scramble("rkqodlw","world"), true);
 		testing(Scramblies.scramble("cedewaraaossoqqyt","codewars"),true);
 		testing(Scramblies.scramble("katas","steak"),false);

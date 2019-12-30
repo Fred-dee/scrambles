@@ -19,16 +19,13 @@ public class Scramblies {
                 .collect(Collectors.
                         groupingBy(Function.identity(), Collectors.counting())
                 );
-        if (charCountStr2.size() < charCountStr1.size()) {
-            return false;
-        } else {
-            for (Map.Entry<String, Long> entry : charCountStr2.entrySet()) {
-                String s = entry.getKey();
-                Long aLong = entry.getValue();
-                if (charCountStr2.containsKey(s) && charCountStr2.get(s) < aLong) {
-                    returnValue = false;
-                    break;
-                }
+
+        for (Map.Entry<String, Long> entry : charCountStr2.entrySet()) {
+            String s = entry.getKey();
+            Long aLong = entry.getValue();
+            if (!charCountStr1.containsKey(s) || charCountStr1.get(s) < aLong) {
+                returnValue = false;
+                break;
             }
         }
         return returnValue;
